@@ -1,0 +1,41 @@
+version: "3"
+services:
+  postgres_catalog:
+    image: postgres:12
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=postgres
+    ports:
+      - 5432:5432
+    volumes:
+      - ./db/schema.sql:/docker-entrypoint-initdb.d/schema.sql
+    networks:
+      catalog_db:
+        ipv4_address: 172.16.0.11
+
+  postgres_pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "email@email.com"
+      PGADMIN_DEFAULT_PASSWORD: "pass"
+      PGADMIN_CONFIG_SERVER_MODE: "False"
+      PGADMIN_CONFIG_MASTER_PASSWORD_REQUIRED: "False"
+    ports:
+      - "16543:80"
+    depends_on:
+      - postgres_catalog
+    networks:
+      catalog_db:
+        ipv4_address: 172.16.0.13
+    volumes:
+      - ./db/servers.json:/pgadmin4/servers.json
+      - ./pgpass:/pgpass
+
+networks:
+  catalog_db:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.16.0.0/16
+          gateway: 172.16.0.1

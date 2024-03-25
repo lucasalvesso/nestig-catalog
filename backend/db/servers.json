@@ -1,0 +1,14 @@
+{
+  "Servers": {
+    "1": {
+      "Name": "Catalog",
+      "Group": "Servers",
+      "Host": "172.16.0.11",
+      "Port": 5432,
+      "MaintenanceDB": "postgres",
+      "Username": "postgres",
+      "PassFile": "pgpass",
+      "SSLMode": "prefer"
+    }
+  }
+}
