@@ -1,0 +1,85 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #FFFFFF;
+    color: #0c0c0c;
+}
+
+.navbar-logo img {
+    width: 100px;
+}
+
+.navbar-menu {
+    list-style-type: none;
+    display: flex;
+}
+
+.navbar-menu li {
+    margin-right: 20px;
+}
+
+.navbar-menu li:last-child {
+    margin-right: 0;
+}
+
+.navbar-menu li a {
+    color: #131111;
+    text-decoration: none;
+}
+
+.navbar-cart-icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.navbar-cart-icon button {
+    border:0;
+    background:transparent
+}
+
+.cart-count-icon {
+    background-color: black;
+    color: white;
+    display: inline-block;
+    border-radius: 50%;
+    padding-left:10px;
+    box-sizing: border-box;
+
+    width: 20px;
+    height: 20px;
+}
+
+.cart-count-number {
+    width: 8px;
+    height: 10px;
+    top: 5px;
+    left: 6px;
+
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 10px;
+    text-align: center;
+
+}
+
+/* Estilos para tornar o navbar responsivo */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-menu {
+        margin-top: 20px;
+    }
+
+    .navbar-menu li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .navbar-cart-icon {
+        margin-top: 20px;
+    }
+}

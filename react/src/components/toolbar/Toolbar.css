@@ -1,0 +1,35 @@
+.custom-select-container {
+    display: flex;
+    gap: 24px;
+    height: 122px;
+    padding: 0 160px 0 160px;
+}
+
+.select-wrapper label{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 26px;
+    color: #6C7275;
+    margin-bottom: 1px;
+}
+
+.select-button {
+    width: 262px;
+    height: 48px;
+    border: 2px solid #6C7275;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+select {
+    width: 150px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}

@@ -1,0 +1,47 @@
+.newsletter-container {
+    background-image: url('../../images/newsletter.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0;
+}
+
+.newsletter-content {
+    text-align: center;
+    color: #000;
+}
+
+.newsletter-content h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.newsletter-content p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    justify-content: center;
+}
+
+.input-group input {
+    padding: 10px;
+    width: 300px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.input-group button {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: black;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.input-group button:hover {
+    background-color: #f3f3f3;
+    color: #181818;
+}
