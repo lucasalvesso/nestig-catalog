@@ -1,0 +1,30 @@
+README
+Este repositório contém o código-fonte de um projeto que possui uma pasta para o backend e outra para o frontend.
+
+Configuração do Backend
+Na pasta backend, siga os seguintes passos:
+
+Execute npm install para instalar as dependências do projeto.
+
+Execute docker-compose up para criar e iniciar o banco de dados.
+
+Após o banco de dados estar funcionando, execute o comando npm run backend para iniciar o serviço backend.
+
+Configuração do Frontend
+Na pasta frontend, siga estes passos:
+
+Execute npm install para instalar as dependências do projeto.
+
+Após a instalação das dependências, execute npm run start para iniciar o servidor de desenvolvimento do frontend.
+
+Observações
+Certifique-se de ter o Docker instalado em seu ambiente para a execução do banco de dados. Além disso, verifique se o Node.js e o npm estão instalados para a instalação das dependências e execução dos comandos do backend e frontend.
+
+Caso tenha alguma dúvida ou problema, não hesite em entrar em contato.
+
+
+ENDPOINTS:
+
+http://localhost:3003  -> backend
+http://localhost:3000  -> frontend
+http://localhost:16543 -> pgadmin
