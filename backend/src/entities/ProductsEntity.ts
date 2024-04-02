@@ -1,4 +1,11 @@
-import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
+import {
+  Entity,
+  PrimaryGeneratedColumn,
+  Column,
+  OneToOne,
+  JoinColumn,
+} from "typeorm";
+import { RatingsEntity } from "./RatingsEntity";
 
 @Entity("products")
 export class ProductsEntity {
@@ -26,4 +33,8 @@ export class ProductsEntity {
 
   @Column()
   ratingId: number;
+
+  @OneToOne(() => RatingsEntity, (rating) => rating.id)
+  @JoinColumn()
+  rating: RatingsEntity;
 }

@@ -2,13 +2,14 @@ import { Request, Response } from "express";
 import { autoInjectable } from "tsyringe";
 import { ProductsService } from "../services/ProductsService";
 import { ProductsEntity } from "../entities/ProductsEntity";
+import { ProductsQueryOptions } from "../interfaces/ProductsQueryOptions";
 
 @autoInjectable()
 export class ProductsController {
   constructor(private service: ProductsService) {}
 
   async getAll(req: Request, res: Response) {
-    const users = await this.service.getAll("");
+    const users = await this.service.getAll(req.query as ProductsQueryOptions);
     res.json(users);
   }
 

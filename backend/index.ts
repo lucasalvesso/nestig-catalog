@@ -4,18 +4,19 @@ import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 import { routes } from "./src/routes";
-import { createConnection, getConnection } from "typeorm";
+import { createConnection, DataSource, getConnection } from "typeorm";
 import { container } from "tsyringe";
 import { Database } from "./src/repository/Database";
+import { DataSourceOptions } from "typeorm/data-source/DataSourceOptions";
 
 dotenv.config();
 
 const app: express.Application = express();
-const port = 3000;
+const port = 3003;
 
 app.use(
   cors({
-    origin: ["http://localhost:4000"],
+    origin: ["http://localhost:3000"],
     methods: ["GET", "POST", "OPTIONS"],
     allowedHeaders: ["*"],
   }),
